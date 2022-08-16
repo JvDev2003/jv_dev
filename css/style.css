@@ -346,7 +346,7 @@ footer{
     }
 }
 
-@media screen and (max-width:400px){
+@media screen and (max-width:640px){
     .conteiner-previa{
         padding: 20px;
         top: 70px;
