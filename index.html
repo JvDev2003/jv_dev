@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <title>site</title>
+        <script src="js/jquery.js"></script>
+        <script src="js/functions.js"></script>
+        
+    </head>
+    <body>
+        <header id="bgd">
+            <div class="overlay">
+                <h1>Jvs</h1>
+                <nav class="desktop">
+                    <ul>
+                        <li><a href="#exp">Experiencia</a></li>
+                        <li><a href="#habi">Habilidades</a></li>
+                        <li><a href="#proj">Projetos</a></li>
+                        <li><a href="#sobre-mim">Sobre mim</a></li>
+                        <li><a href="#contatos">Contato</a></li>
+                        <div class="clear"></div><!--clear-->
+                    </ul>
+                </nav>
+                <nav class="mobile">
+                    <img src="img/burger-menu.png" onclick="myFunction()">
+                    <div class="clear"></div><!--clear-->
+                    <ul id="mobile">
+                        <li><a href="#exp">Experiencia</a></li>
+                        <li><a href="#habi">Habilidades</a></li>
+                        <li><a href="#proj">Projetos</a></li>
+                        <li><a href="#sobre-mim">Sobre mim</a></li>
+                        <li><a href="#contatos">Contato</a></li>
+                        <div class="clear"></div><!--clear-->
+                    </ul>
+                </nav>
+                <div class="clear"></div><!--clear-->
+                <div class="conteiner-previa">
+                    <h2>Meu nome é João Vitor Santos</h2>
+                    <p>e esse é meu repositorio.</p>
+                    <ul>
+                        <li>HTML/CSS;</li>
+                        <li>JavaScript{Jquery};</li>
+                        <li>[mais coisas em breve];</li>
+                    </ul>
+                </div><!--conteiner-previa-->
+            </div><!--overlay-->
+        </header>
+        <main>
+            <section class="transicao" id="sobre-mim">
+                <div class="conteiner-text">
+                    <h2>Sobre mim</h2>
+                    <p>Meu nome é João tenho 19 anos atualmente, sou apaixonado por tecnologia desde muito pequeno, mas minha paixão por software começou a partir do momento que eu entrei em contato com lógica de programação no ensino médio, eu adoro lógica e como eu aprendi essa materia com muita facilidade quis me aprofundar e acabei entrando de cabeça no mundo da programação.</p>
+                </div><!--conteiner-text-->
+            </section><!--transicao-->
+            <section class="transicao right" id="habi">
+                <div class="conteiner-text">
+                    <h2>Habilidades</h2>
+                    <p>Tenho raciocinio muito rápido, gosto de automotizar e acelerar processos, tenho uma comunicação muito boa e gosto de estar sempre evoluindo.</p>
+                    <p><b>Habilidades que possuo atualmente:</b></p>
+                    <ul>
+                        <li>algoritimo;</li>
+                        <li>HTML/CSS;</li>
+                        <li>Conceitos de programação estruturada {C};</li>
+                        <li>JavaScript {Jquery};</li>
+                        <li>Conceitos PHP;</li>
+                        <li>{logo haverá mais};</li>
+                    </ul>
+                </div><!--conteiner-text-->
+            </section><!--transicao-->
+            <div class="clear"></div><!--clear-->
+            <section class="transicao" id="exp">
+                <div class="conteiner-text">
+                    <h2>Experiências</h2>
+                    <p>Já tive algumas experiências profissionais embora nenhuma delas esteja na área do desenvolvimento.<br>Na <b>FMS de Ponta grossa</b> eu era responsável pela manutenção de computadores e impressoras, também era responsavel por atendimentos de ocorrencias tecnicas, e em alguns casos fiquei responvel por reparos na infrastrutura (redes).<br>Na <b>ApWinner</b> foi contrado como assistente administrativo, porém sempre que tenho tempo livre, tenho a liberdade para criar macros e até mesmo projetos mais complexos de automação</p>
+                </div><!--conteiner-text-->
+            </section><!--transicao-->
+            <div class="transicao right" id="proj">
+                <div class="conteiner-text">
+                    <h2>Projetos</h2>
+                    <p>Nenhum :(</p>
+                    <p>{Ainda em desenvolvimento}</p>
+                </div><!--conteiner-text-->
+            </div><!--transicao-->
+            <div class="clear"></div><!--clear-->
+        </main>
+        <section class="contatos" id="contatos">
+            <h2>Entre em contato comigo!!!</h2>
+            <a href="https://www.discordapp.com/users/382615365315985418" class="discord" target="_blank"><img src="img//iconD.png"></a>
+            <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-santos-b58618239" class="linkedin" target="_blank"><img src="img//iconL.png"></a>
+            <a href="https://www.instagram.com/jvs_2049/" class="instagram" target="_blank"><img src="img//iconI.png"></a>
+        </section><!--contatos-->
+        <div class="conteiner-OU">
+            <h2>OU</h2>
+        </div>
+        <section class="form">
+            <h2>Me contate diretamente por aqui &#128071</h2>
+            <form method="post" action="#">
+                <div><p>Nome:</p><input type="text" name="nome" placeholder="nome" required></div>
+                <div><p>Email:</p><input type="email" name="email" placeholder="email" required></div>
+                <div><p>Mensagem:</p><textarea name="comentario" placeholder="insira sua mensagem aqui..." required></textarea></div>
+                <input type="submit" action="enviar">
+                <input type="reset">
+            </form>
+        </section><!--form-->
+        <footer>
+            <div class="conteiner-footer">
+                <p>© Copyright 2022 Jv.DEV - All Rights Reserved</p>
+            </div>
+        </footer>
+    </body>
+</html>

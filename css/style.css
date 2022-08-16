@@ -1,0 +1,379 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body{
+    height: 100%;
+    background-color: black;
+}
+
+.clear{
+    clear: both;
+}
+
+/*-------header-------*/
+header{
+    width: 100%;
+    background-image: url('../img/bg1.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    transition: 1s;
+}
+
+header > .overlay{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 40px 50px;
+}
+
+.overlay > h1{
+    float: left;
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    color: white;
+}
+
+.overlay nav.desktop{
+    float: right;
+}
+
+nav.desktop ul{
+    list-style-type: none;
+    width:800px;
+}
+
+nav.desktop ul li{
+    padding: 10px;
+    float: left;
+    text-align: center;
+}
+
+nav.desktop ul li:hover{
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+nav.desktop ul li > a{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+nav.mobile{
+    display: none;
+    float: right;
+	background-repeat: no-repeat;
+}
+
+nav.mobile:hover ul{
+    display: block;
+}
+
+nav.mobile img{
+    float: right;
+    width: 36px;
+    cursor: pointer;
+}
+
+nav.mobile ul{
+    top: 77px;
+    right: 47px;
+    display: none;
+    position: absolute;
+    background-color: rgb(150, 145, 145);
+    list-style-type: none;
+    width:350px;
+    text-align: center;
+    z-index: 999;
+}
+
+nav.mobile ul li:not(:nth-child(5)){
+    border-bottom:1px solid white;
+    
+}
+
+nav.mobile ul li:hover{
+    background-color: rgb(132, 131, 131);
+}
+nav.mobile ul li > a{
+    width: 100%;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.conteiner-previa{
+    padding: 40px;
+    width:600px;
+    background-color: rgba(191, 191, 191, 0.3);
+    position: relative;
+    color: white;
+    vertical-align: center;
+    top: 200px;
+    left: 100px;
+}
+
+.conteiner-previa ul{
+    list-style-position: inside;
+}
+
+.conteiner-previa h2{
+    font-size: 30px;
+}
+
+.conteiner-previa p{
+    font-size: 20px;
+}
+/*-------------------*/
+
+/*-------main--------*/
+
+main{
+    width: 100%;
+    padding: 0 2%;
+}
+.conteiner-text{
+    color:white;
+    background-color: rgb(75, 75, 75);
+    width: 100%;
+    padding: 30px;
+}
+
+.conteiner-text ul{
+    list-style-position: inside;
+}
+
+.transicao{
+    margin: 20px 10px; 
+    width: 55%;
+    opacity: 0;
+    transform: translate3d(-100px,0,0);
+    transition: .3s;
+}
+
+main .right{
+    float: right;
+}
+
+.transicao-start{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+/*--------------------------*/
+
+/*---------------contatos----------*/
+section.contatos {
+    margin-top: 10px;
+    padding: 30px 0;
+    background-color: rgb(150, 145, 145);
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+section.contatos h2{
+    padding: 10px 0 20px 0; 
+}
+
+.contatos a > img{
+    background-image: url('../img/iconG.png.png');
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+}
+
+.discord  > img, .linkedin > img, .instagram > img{
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.discord > img:hover{
+    background-color: rgba(8, 152, 255, 0.3);
+}
+
+.linkedin > img:hover{
+    background-color: rgba(8, 20, 255, 0.3);
+}
+
+.instagram > img:hover{
+    background-color: rgba(251, 5, 251, 0.3);
+}
+/*------------------------*/
+
+.conteiner-OU{
+    text-align: center;
+    color: white;
+    transform: translate3d(0,-20px,0);
+}
+
+.conteiner-OU h2{
+    font-size: 30px;
+    font-weight: normal;
+}
+/*-----------form-----------*/
+section.form{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    padding: 0 2%;
+}
+
+section.form > h2{
+    font-weight: normal;
+}
+
+form > div{
+    margin: 20px;
+}
+
+form > div > p{
+    margin-bottom: 5px;
+}
+
+section.form input[type=text], section.form input[type=email]{
+    width: 90%;
+    max-width: 400px;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 7px;
+    border-radius: 10px;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+}
+
+section.form textarea{
+    width: 90%;
+    max-width: 400px;
+    height: 100px;
+    padding-left: 7px;
+    padding-top: 7px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    resize: none;
+    color: white;
+}
+
+section.form input[type=submit]{
+    background-color: rgba(255, 255, 255, 0.0);
+    width: 140px;
+    height: 45px;
+    cursor: pointer;
+    color: green;
+    border: 1px solid green;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+section.form input[type=submit]:hover{
+    background-color: green;
+    color: white;
+    border: 1px solid white;
+}
+
+section.form input[type=reset]{
+    background-color: rgba(255, 255, 255, 0.0);
+    width: 140px;
+    height: 45px;
+    cursor: pointer;
+    color: white;
+    border: 1px solid  white;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+section.form input[type=reset]:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/*--------------------------*/
+
+/*---------footer--------*/
+footer{
+    padding: 0 2%;
+    color: white;
+}
+.conteiner-footer{
+    max-width: 1280px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0 20px 0;
+}
+/*--------------------------*/
+
+@media screen and (max-width:1024px) {
+    nav.desktop{
+        display: none;
+    }
+    header nav.mobile{
+        display: block;
+    }
+
+    .conteiner-previa{
+        display: inline-block;
+        top: 200px;
+        left: auto;
+    }
+}
+
+@media screen and (max-width:768px){
+    .conteiner-previa{
+        top: 100px;
+        width: 90%;
+        margin: 0 ;
+    }
+    .transicao{
+        width: 90%;
+    }
+
+    header{
+        background-position: center;
+    }
+
+    nav.mobile ul{
+        top:77px;
+        right: 0;
+        width:100%;
+    }
+}
+
+@media screen and (max-width:400px){
+    .conteiner-previa{
+        padding: 20px;
+        top: 70px;
+        width: 100%;
+        margin: 0 ;
+    }
+
+    header > .overlay{
+        min-height: 600px;
+    }
+
+    header{
+        min-height: 600px;
+    }
+
+    .conteiner-previa h2{
+        font-size: 20px;
+    }
+
+    .conteiner-previa p{
+        font-size: 15px;
+    }
+
+    .conteiner-previa ul li{
+        font-size: 15px;
+    }
+
+}
+
+
