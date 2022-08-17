@@ -344,6 +344,30 @@ footer{
         right: 0;
         width:100%;
     }
+
+    .discord > img{
+        background-color: rgba(8, 152, 255, 0.3);
+    }
+
+    .linkedin > img{
+        background-color: rgba(8, 20, 255, 0.3);
+    }
+
+    .instagram > img{
+        background-color: rgba(251, 5, 251, 0.3);
+    }	
+
+    .discord > img:hover{
+        background-color: rgba(8, 152, 255, 0.5);
+    }
+
+    .linkedin > img:hover{
+        background-color: rgba(8, 20, 255, 0.5);
+    }
+
+    .instagram > img:hover{
+        background-color: rgba(251, 5, 251, 0.5);
+    }
 }
 
 @media screen and (max-width:640px){
