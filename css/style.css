@@ -150,6 +150,10 @@ main{
     list-style-position: inside;
 }
 
+.conteiner-text ul li a{
+   color: white;
+}
+
 .transicao{
     margin: 20px 10px; 
     width: 55%;
