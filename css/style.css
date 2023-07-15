@@ -6,17 +6,13 @@
 }
 
 body{
-    height: 100%;
+    height: 100vh;
     background-color: black;
+    overflow-x: hidden;
 }
-
-.clear{
-    clear: both;
-}
-
 /*-------header-------*/
 header{
-    width: 100%;
+    width: 100vw;
     background-image: url('../img/bg3.jpg');
     background-image: url('../img/bg2.jpg');
     background-image: url('../img/bg1.jpg');
@@ -25,49 +21,52 @@ header{
     transition: 1s;
 }
 
+
 header > .overlay{
-    width: 100%;
-    min-height: 100vh;
+    width: 100vw;
     background-color: rgba(0, 0, 0, 0.3);
-    padding: 40px 50px;
+    padding: 4vw 5vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.overlay > h1{
-    float: left;
+.overlay > .menus > h1{
     font-family: 'Dancing Script', cursive;
     font-size: 50px;
     color: white;
 }
 
-.overlay nav.desktop{
-    float: right;
+.menus{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav.desktop ul{
+    display: flex;
     list-style-type: none;
-    width:800px;
 }
 
 nav.desktop ul li{
     padding: 10px;
-    float: left;
     text-align: center;
 }
 
-nav.desktop ul li:hover{
-    background-color: rgba(255, 255, 255, 0.15);
-}
 
 nav.desktop ul li > a{
+    padding: 15px;
     font-size: 20px;
     text-decoration: none;
     color: white;
-    padding: 10px;
+}
+
+nav.desktop ul a:hover{
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 nav.mobile{
     display: none;
-    float: right;
 	background-repeat: no-repeat;
 }
 
@@ -76,7 +75,6 @@ nav.mobile:hover ul{
 }
 
 nav.mobile img{
-    float: right;
     width: 36px;
     cursor: pointer;
 }
@@ -88,7 +86,7 @@ nav.mobile ul{
     position: absolute;
     background-color: rgb(150, 145, 145);
     list-style-type: none;
-    width:350px;
+    width:90vw;
     text-align: center;
     z-index: 999;
 }
@@ -110,14 +108,12 @@ nav.mobile ul li > a{
 }
 
 .conteiner-previa{
-    padding: 40px;
-    width:600px;
+    margin-top: 20vh;
+    padding: 2vw;
+    width:45vw;
     background-color: rgba(191, 191, 191, 0.3);
     position: relative;
     color: white;
-    vertical-align: center;
-    top: 200px;
-    left: 100px;
 }
 
 .conteiner-previa ul{
@@ -136,13 +132,14 @@ nav.mobile ul li > a{
 /*-------main--------*/
 
 main{
-    width: 100%;
+    width: 100vw;
     padding: 0 2%;
 }
+
 .conteiner-text{
     color:white;
     background-color: rgb(75, 75, 75);
-    width: 100%;
+    width: 55vw;
     padding: 30px;
 }
 
@@ -155,15 +152,21 @@ main{
 }
 
 .transicao{
-    margin: 20px 10px; 
-    width: 55%;
+    margin: 2vw 1vh; 
+    width: 55vw;
     opacity: 0;
     transform: translate3d(-100px,0,0);
     transition: .3s;
 }
 
+main{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
 main .right{
-    float: right;
+    align-self: flex-end;
 }
 
 .transicao-start{
@@ -187,14 +190,12 @@ section.contatos h2{
 }
 
 .contatos a > img{
-    background-image: url('../img/iconG.png.png');
-    background-repeat: no-repeat;
     width: 40px;
     height: 40px;
     transition: 0.5s;
 }
 
-.discord  > img, .linkedin > img, .instagram > img{
+.discord  > img, .linkedin > img, .instagram > img, .whatsapp > img{
     border-radius: 10px;
     padding: 5px;
 }
@@ -209,6 +210,10 @@ section.contatos h2{
 
 .instagram > img:hover{
     background-color: rgba(251, 5, 251, 0.3);
+}
+
+.whatsapp > img:hover{
+    background-color: rgba(0, 251, 38, 0.3);
 }
 /*------------------------*/
 
@@ -317,38 +322,35 @@ footer{
 /*--------------------------*/
 
 @media screen and (max-width:1024px) {
-    nav.desktop{
+    .menus{
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .menus > nav.desktop{
         display: none;
     }
-    header nav.mobile{
-        display: block;
+    div > nav.mobile{
+        display:block;
+        align-self: center;
+    }
+
+    .transicao{
+        width: 95vw;
     }
 
     .conteiner-previa{
-        display: inline-block;
-        top: 200px;
-        left: auto;
+        width: 90vw;
+    }
+    
+    .conteiner-text{
+        width: 100%;
     }
 }
 
 @media screen and (max-width:768px){
-    .conteiner-previa{
-        top: 100px;
-        width: 90%;
-        margin: 0 ;
-    }
-    .transicao{
-        width: 90%;
-    }
-
     header{
         background-position: center;
-    }
-
-    nav.mobile ul{
-        top:77px;
-        right: 0;
-        width:100%;
     }
 
     .discord > img{
@@ -363,6 +365,10 @@ footer{
         background-color: rgba(251, 5, 251, 0.3);
     }	
 
+    .whatsapp > img{
+        background-color: rgba(0, 251, 38, 0.3);
+    }
+
     .discord > img:hover{
         background-color: rgba(8, 152, 255, 0.5);
     }
@@ -374,22 +380,22 @@ footer{
     .instagram > img:hover{
         background-color: rgba(251, 5, 251, 0.5);
     }
+
+    .whatsapp > img{
+        background-color: rgba(0, 251, 38, 0.5);
+    }
+
 }
 
 @media screen and (max-width:640px){
-    .conteiner-previa{
-        padding: 20px;
-        top: 70px;
-        width: 100%;
-        margin: 0 ;
-    }
-
     header > .overlay{
-        min-height: 600px;
+        width: 100vw;
+        min-height: 100vh;
     }
 
     header{
-        min-height: 600px;
+        width: 100vw;
+        min-height: 100vh;
     }
 
     .conteiner-previa h2{
@@ -403,7 +409,17 @@ footer{
     .conteiner-previa ul li{
         font-size: 15px;
     }
+    
+    main .right{
+        align-self: auto;
+    }
 
+    .conteiner-previa{
+        width:100%;
+    }
+
+    .transicao{
+        margin: 1vh auto; 
+    }
 }
-
 
